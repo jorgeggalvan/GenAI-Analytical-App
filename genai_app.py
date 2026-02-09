@@ -1,14 +1,16 @@
 
 # Importación de librerías
 import streamlit as st
+import streamlit.components.v1 as components
+from pathlib import Path
+
 import pandas as pd
 import pandasql as ps
 import numpy as np
 import plotly.express as px
-
-from pathlib import Path
+import matplotlib.pyplot as plt
+import seaborn as sns
 from ydata_profiling import ProfileReport
-import streamlit.components.v1 as components
 
 from google import genai
 from groq import Groq
@@ -1160,3 +1162,4 @@ with st.expander('Interpretación de IA', expanded=False):
                 
     except Exception as e:
         st.error(f'Error al interpretar el resultado: {e}') # Mostrar mensaje de error
+
